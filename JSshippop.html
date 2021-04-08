@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function addname() {
+    var x = document.getElementById('add');
+    var y = document.getElementById('show');
+    x.style.visibility = 'visible';
+    y.style.visibility = 'hidden';
+}
+function showname() {
+    var x = document.getElementById('add');
+    var y = document.getElementById('show');
+    x.style.visibility = 'hidden';
+    y.style.visibility = 'visible';
+    var firstname = document.getElementById("firstname").value;
+    var lastname = document.getElementById("lastname").value;
+    if(firstname==='Shippop'){
+        document.getElementById("hellotext").innerHTML = "Best Online Shipping Platform";
+        console.log("Best Online Shipping Platform");
+    }else{
+        document.getElementById("hellotext").innerHTML = "Hello Shippop, My name is "+firstname+" "+lastname;
+        console.log("Hello Shippop, My name is "+firstname+" "+lastname);
+    }
+}
+</script>
+</head>
+<body>
+    <div id="add">
+        firstName : 
+        <input type="text" id="firstname" required>
+        lastName : 
+        <input type="text" id="lastname" required>
+        <button type="button" onclick="showname()">Submit</button>
+    </div>
+    <div id="show" style="visibility: hidden;">
+        <p id="hellotext"></p>
+        <button type="button" onclick="addname()">back</button>
+    </div>
+
+
+
+</body>
+</html> 
